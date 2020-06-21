@@ -1,0 +1,5 @@
+# Deathadder Chroma
+xinput set-prop <device_id> 297 -0.595
+
+# Sensei Ten
+xinput set-prop <device_id> 297 -0.950  # mouse set to medium CPI
