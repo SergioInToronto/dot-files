@@ -57,3 +57,4 @@ alias dv='nmcli c down vpn'
 alias vash='vim ~/.bashrc'
 alias b64='base64 -w 0'
 alias rm_nodemodules='find . -maxdepth 2 -name "node_modules" -type d -exec rm -rf "{}" \;'
+alias restart-gnome-shell="busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart(    \"Restarting…\")'"
