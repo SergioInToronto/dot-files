@@ -5,5 +5,8 @@ gsettings set org.gnome.desktop.peripherals.keyboard delay 280
 sudo apt install gnome-tweaks -y
 # swap esc with capslock
 
+# Uninstall totem, amazing, gnome accounts, etc.
+
+# Set VLC as default for all file types
 
 # Now find a nice wallpaper
