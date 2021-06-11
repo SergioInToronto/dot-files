@@ -1,0 +1,12 @@
+# install brew
+# install Alfred
+# install Spectacle
+# install espanso
+# spend all day in the preferences: extra esc, dock, global hotkeys especially mission control
+
+
+# Finder stop hiding protected files & folders
+TODO
+
+# Focus follows mouse
+defaults write com.apple.Terminal FocusFollowsMouse -bool true  # Does this work?
