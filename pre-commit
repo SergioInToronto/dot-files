@@ -1,0 +1,2 @@
+# Ruby lint & format
+git diff --name-only --cached | xargs bundle exec rubocop --auto-correct --
