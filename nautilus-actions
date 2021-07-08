@@ -1,0 +1,2 @@
+# Convert To MP3
+ffmpeg -i %f -vn %f.mp3
