@@ -2,4 +2,4 @@
 xinput set-prop <device_id> 297 -0.595
 
 # Sensei Ten
-xinput set-prop <device_id> 297 -0.931  # mouse set to medium CPI
+xinput set-prop <device_id> 297 -0.838235  # mouse set to medium CPI
