@@ -44,6 +44,7 @@ alias yarn='node_modules/yarn/bin/yarn'
 alias subl='guake --toggle-visibility && /usr/bin/subl'
 
 # Net stuff
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias ethip='ip a | grep -e enp -e enx | awk "/inet /{print $2}" | cut -d/ -f1'
 alias ips='ip a | grep "inet " | grep -Pe "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias refi='active=`n c show --active | awk "/wifi/{print \\$1}"`; n c down $active; n c up $active'
