@@ -55,7 +55,7 @@ alias uv='nmcli c up vpn'
 alias dv='nmcli c down vpn'
 
 # Misc stuff
-alias vash='vim ~/.bashrc'
+alias vash='vim ~/.bashrc && source ~/.bashrc'
 alias b64='base64 -w 0'
 alias kv='killall -9 vlc'
 alias ks='killall -9 steam'
