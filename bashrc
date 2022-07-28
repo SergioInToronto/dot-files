@@ -57,5 +57,10 @@ alias dv='nmcli c down vpn'
 # Misc stuff
 alias vash='vim ~/.bashrc'
 alias b64='base64 -w 0'
+alias kv='killall -9 vlc'
+alias ks='killall -9 steam'
+alias is_unifi_running='sudo systemctl status unifi' # Ubiquiti ubiquiti wireless WiFi wifi
+alias merge='ffmpeg -i DASH_vid.mp4 -i DASH_audio.mp4 -c:v copy -c:a aac output.mp4 && vlc output.mp4' # -itsoffset 0.250
+alias remove_metadata_from_image='exiftool -all='  # ie: remove_metadata_from_image my_images*.jpg
 alias rm_nodemodules='find . -maxdepth 2 -name "node_modules" -type d -exec rm -rf "{}" \;'
 alias restart-gnome-shell="busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart(    \"Restarting…\")'"
