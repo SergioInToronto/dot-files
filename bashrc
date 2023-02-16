@@ -16,21 +16,32 @@ function parse_git_branch {
 # export PS1='${debian_chroot:+($debian_chroot)}\u:\w$(parse_git_branch)\$ '
 export PS1='\[\e]0;\u: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[00m\]\[\033[01;34m\]\w\[\033[00m\]$(parse_git_branch)\$ '
 
+
 # Docker stuff
 alias dstop="docker ps -q | xargs docker stop"
+alias dc='docker-compose'  # shaddows an old-school calculator program
+alias dx='docker exec -it `docker ps -q  | head -n 1` bash'
 alias dps="docker ps -q | head -n1"
 alias dx='docker exec -it $(dps) /bin/bash'
 alias dimg="docker images | head -n 2 | tail -n 1 | awk '{print \$3}'"
+alias drm='docker rm `docker ps -a -q`'
+alias dsp='docker system prune --volumes'
+
 
 # git stuff
-alias glog='git log --graph --color --decorate'
-alias glogo='git log --graph --color --decorate --oneline'
-alias glof="git log --color --all --date-order --decorate --dirstat=lines,cumulative --stat | sed 's/\([0-9] file[s]\? .*)$\)/\1\n_______\n-------/g' | less -R"
-alias com='git checkout master'
 alias gl='git pull --ff-only'
 alias gp='git push'
 alias upush='git push -u origin `git rev-parse --abbrev-ref HEAD`'
-alias rmb='git remote prune origin && git branch | grep -v -e "master" -e "*"| xargs -L 1 git branch -d'
+alias com='git checkout main'
+alias glog='git log --graph --color --decorate'
+alias glogo='git log --graph --color --decorate --oneline'
+alias glof="git log --color --all --date-order --decorate --dirstat=lines,cumulative --stat | sed 's/\([0-9] file[s]\? .*)$\)/\1\n_______\n-------/g' | less -R"
+alias rmb='git pull; git remote prune origin && git prune && git branch | grep -v -e "main" -e "*"| xargs -L 1 git branch -d'
+alias rmbD='git remote prune origin && git prune && git branch | grep -v -e "main" -e "*"| xargs -L 1 git branch -D'
+
+
+
+
 
 # Development stuff
 export CHROME_BIN=/usr/lib/chromium-browser/chromium-browser
