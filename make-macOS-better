@@ -8,5 +8,9 @@
 # Finder stop hiding protected files & folders
 TODO
 
+
+# ctrl + command + click to drag windows
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # Focus follows mouse
 defaults write com.apple.Terminal FocusFollowsMouse -bool true  # Does this work?
