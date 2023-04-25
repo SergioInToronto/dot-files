@@ -1,0 +1,26 @@
+[
+
+	{ "keys": ["ctrl+shift+up"], "command": "swap_line_up" },
+	{ "keys": ["ctrl+shift+down"], "command": "swap_line_down" },
+    { "keys": ["super+shift+up"], "command": "swap_line_up" },
+    { "keys": ["super+shift+down"], "command": "swap_line_down" },
+	{ "keys": ["ctrl+super+up"], "command": "pass" },
+	{ "keys": ["ctrl+s"], "command": "save" },
+	{ "keys": ["ctrl+d"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+k", "ctrl+d"], "command": "find_under_expand_skip" },
+
+	{ "keys": ["ctrl+shift+c"], "command": "copy_path"},
+
+	{ "keys": ["alt+up"], "command": "scroll_lines", "args": {"amount": 1.0} },
+	{ "keys": ["alt+down"], "command": "scroll_lines", "args": {"amount": -1.0} },
+
+	{ "keys": ["ctrl+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+shift+p"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+    { "keys": ["super+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+    // CMD + K twice to switch focus between file columns
+    { "keys": ["super+k", "super+k"], "command": "focus_neighboring_group" },
+
+    //ctrl + / GOTO definition
+    { "keys": ["ctrl+/"], "command": "goto_definition" },
+]
