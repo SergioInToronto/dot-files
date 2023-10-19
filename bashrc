@@ -50,8 +50,6 @@ alias gitres='git restore `git diff --name-only`'
 alias remas='git fetch origin && git rebase origin/main -i'
 
 
-
-
 # Development stuff
 export CHROME_BIN=/usr/lib/chromium-browser/chromium-browser
 export EDITOR=vim
@@ -62,6 +60,7 @@ alias uj='echo -n $1 > /home/sergio.martins/.config/autokey/data/Day-to-day/jcod
 alias grunt='node_modules/grunt/bin/grunt'
 alias yarn='node_modules/yarn/bin/yarn'
 alias subl='guake --toggle-visibility && /usr/bin/subl'
+
 
 # Net stuff
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
@@ -74,6 +73,7 @@ alias n='nmcli'
 alias uv='nmcli c up vpn'
 alias dv='nmcli c down vpn'
 
+
 # Misc stuff
 alias vash='vim ~/.bashrc && source ~/.bashrc'
 alias b64='base64 -w 0'
@@ -85,3 +85,8 @@ alias newmerge='ffmpeg -i HLS_*.ts -i HLS_AUDIO* -c:a aac -c:v h264 output.mp4 &
 alias remove_metadata_from_image='exiftool -all='  # ie: remove_metadata_from_image my_images*.jpg
 alias rm_nodemodules='find . -maxdepth 2 -name "node_modules" -type d -exec rm -rf "{}" \;'
 alias restart-gnome-shell="busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart(    \"Restarting…\")'"
+
+
+# Gaming
+alias proton='STEAM_COMPAT_CLIENT_INSTALL_PATH=$(pwd) STEAM_COMPAT_DATA_PATH=$(pwd) ~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton'
+# ^ usage: `proton run ./game.exe`
