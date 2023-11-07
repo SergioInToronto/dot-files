@@ -63,7 +63,7 @@ alias subl='guake --toggle-visibility && /usr/bin/subl'
 
 
 # Net stuff
-alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
 alias ethip='ip a | grep -e enp -e enx | awk "/inet /{print $2}" | cut -d/ -f1'
 alias ips='ip a | grep "inet " | grep -Pe "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"'
 alias refi='active=`n c show --active | awk "/wifi/{print \\$1}"`; n c down $active; n c up $active'
@@ -85,7 +85,6 @@ alias newmerge='ffmpeg -i HLS_*.ts -i HLS_AUDIO* -c:a aac -c:v h264 output.mp4 &
 alias merge3='pushd /tmp/ && ffmpeg -i v.mp4 -i a.mp4 -c:v copy -c:a aac output.mp4 && vlc output.mp4'
 alias remove_metadata_from_image='exiftool -all='  # ie: remove_metadata_from_image my_images*.jpg
 alias rm_nodemodules='find . -maxdepth 2 -name "node_modules" -type d -exec rm -rf "{}" \;'
-alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
 alias restart-gnome-shell="busctl --user call org.gnome.Shell /org/gnome/Shell org.gnome.Shell Eval s 'Meta.restart(    \"Restarting…\")'"
 
 
