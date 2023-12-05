@@ -1,10 +1,17 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1 # I'm perfectly happy with bash thank you macOS for being annoying about it
+export PS1='\u \w\$ '
+alias vash='vim ~/.bashrc && source ~/.bashrc'
+
+# If I really am using zsh:
+export PS1='%n %~ %#'
+alias vash='vim ~/.zshrc && source ~/.zshrc'
+
 export HISTCONTROL=ignoreboth # ignore commands with leading whitespce, ignore duplicate commands
 
 export CLICOLOR=1
 export EDITOR=vim
 alias ll='ls -lA'
-alias vash='vim ~/.bashrc && source ~/.bashrc'
+
 
 # Why do these not get added to PATH in macOS? Or at least a sym link. Seems wrong...
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
@@ -13,5 +20,4 @@ alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 
 # In iterm2 preferences add hotkey: alt + backspace -> Send HEX "0x17"
 
-export PS1='\u \w\$ '
 
