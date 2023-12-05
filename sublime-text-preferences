@@ -5,7 +5,7 @@
     ],
     "rulers": [119],
     "ensure_newline_at_eof_on_save": true,
-    "font_size": 13,
+    "font_size": 12,
     "spell_check": true,
     "translate_tabs_to_spaces": true,
     "trim_only_modified_white_space": true,
