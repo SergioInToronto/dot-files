@@ -3,8 +3,15 @@
 # install Rectangle
 # install karabiner-elements
 # install espanso?
+# install itsycal
+
+brew install podman podman-compose
+brew install --cask sublime-text
+brew install vlc
 
 # spend all day tweaking preferences
+# switching desktops hotkeys
+# disable hotcorners
 
 
 # Finder
