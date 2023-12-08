@@ -10,8 +10,8 @@ brew install podman podman-compose
 brew install --cask sublime-text
 brew install vlc
 
+
 # spend all day tweaking system preferences
-# switching desktops hotkeys
 # disable hotcorners
 
 
@@ -22,5 +22,9 @@ brew install vlc
 
 # ctrl + command + click to drag windows
 defaults write -g NSWindowShouldDragOnGesture -bool true
+
+
+# Allow quitting Finder
+defaults write com.apple.finder QuitMenuItem -bool true; killall Finder
 
 
