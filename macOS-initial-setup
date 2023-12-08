@@ -2,22 +2,22 @@
 # install Alfred
 # install Rectangle
 # install karabiner-elements
-# install espanso?
 # install itsycal
+# install espanso?
+# install VS Code
 
 brew install podman podman-compose
 brew install --cask sublime-text
 brew install vlc
 
-# spend all day tweaking preferences
+# spend all day tweaking system preferences
 # switching desktops hotkeys
 # disable hotcorners
 
 
 # Finder
 # view -> show path bar
-# show extensions
-# show hidden files & filters
+# cmd+, to open preferences -> tweak everything
 
 
 # ctrl + command + click to drag windows
