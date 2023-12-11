@@ -2,22 +2,35 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 # I'm perfectly happy with bash thank 
 export PS1='\u \w\$ '
 alias vash='vim ~/.bashrc && source ~/.bashrc'
 
-# If I really am using zsh:
-export PS1='%n %~ %#'
+# If using zsh and git prompt
+source ~/other_dev/zsh-git-prompt/zshrc.sh
+export PROMPT='%n:%~$(git_super_status) $ '
 alias vash='vim ~/.zshrc && source ~/.zshrc'
+setopt interactivecomments # allow using comments in interactive shells too, like bash has by default
 
-export HISTCONTROL=ignoreboth # ignore commands with leading whitespce, ignore duplicate commands
-
-export CLICOLOR=1
-export EDITOR=vim
-alias ll='ls -lA'
 
 
 # Why do these not get added to PATH in macOS? Or at least a sym link. Seems wrong...
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron' # apps aren't automatically added to path
 
-# In iterm2 preferences add hotkey: alt + backspace -> Send HEX "0x17"
+
+# My preferences
+export CLICOLOR=1 # no longer needed?
+export EDITOR=vim # no longer needed?
+export HISTCONTROL=ignoreboth # ignore commands with leading whitespce, ignore duplicate commands
+alias o='open'
+alias ll='ls -lA'
 
 
+
+# In iterm2 preferences, hotkeys:
+# alt+backspace -> HEX "0x17"
+# cmd+left -> hex "0x01"
+# cmd+right -> hex "0x05"
+
+# preferences, profile, keys, key mappings
+# alt+left -> escape "b"
+# alt+right -> escape "f"
