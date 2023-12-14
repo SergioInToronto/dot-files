@@ -1,13 +1,9 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1 # I'm perfectly happy with bash thank you macOS for being annoying about it
 export PS1='\u \w\$ '
 alias vash='vim ~/.bashrc && source ~/.bashrc'
-
-# If using zsh and git prompt
-source ~/other_dev/zsh-git-prompt/zshrc.sh
-export PROMPT='%n:%~$(git_super_status) $ '
-alias vash='vim ~/.zshrc && source ~/.zshrc'
-setopt interactivecomments # allow using comments in interactive shells too, like bash has by default
-
+export HISTCONTROL=ignoreboth # ignore commands with leading whitespce, ignore duplicate commands
+export CLICOLOR=1 # no longer needed?
+export EDITOR=vim # no longer needed?
 
 
 # Why do these not get added to PATH in macOS? Or at least a sym link. Seems wrong...
@@ -16,11 +12,7 @@ alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron' # apps aren't automatically added to path
 
-
 # My preferences
-export CLICOLOR=1 # no longer needed?
-export EDITOR=vim # no longer needed?
-export HISTCONTROL=ignoreboth # ignore commands with leading whitespce, ignore duplicate commands
 alias o='open'
 alias ll='ls -lA'
 
