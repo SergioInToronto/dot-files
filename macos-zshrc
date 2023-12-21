@@ -1,11 +1,53 @@
+# Global stuff
+export PATH=$PATH:/opt/homebrew/bin # add homebrew apps to PATH
+export EDITOR=vim
+
+# Why do these not get added to PATH in macOS? Or at least a sym link. Seems wrong...
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron' # apps aren't automatically added to path
+# macOS doesn't allow opening more than one calculator by default. This command forces a new one
+alias calc='open -na Calculator'
+
+# My preferences
 alias vash='vim ~/.zshrc && source ~/.zshrc'
+alias vesp='espanso edit'
+alias o='open'
+alias grep='grep --color=always'
+alias ls='/bin/ls --color=always'
+alias ll='ls -lA --color=always'
 setopt interactivecomments # allow using comments in interactive shells too, like bash has by default
 setopt HIST_IGNORE_DUPS # ignore duplicate commands in history (when pressing up)
 setopt HIST_IGNORE_SPACE # commands with leading whitespace as not saved into history
+alias pt='ping 128.100.100.128'
+alias ips='ifconfig | grep inet'
+alias uj='echo -n $@ > ~/dev/sergio_scripts/current_story.txt'
 
-# If using zsh and git prompt
+# git stuff
+alias gout='git checkout '
+alias cv='git commit -v'
+alias cav='git commit -a -v'
+alias gs='git status'
+alias gd='git diff'
+alias gl='git pull --ff-only'
+alias gp='git push'
+alias com='git checkout master; echo "did you mean \"cev\"?"'
+alias cev='git checkout develop'
+alias gb='git rev-parse --abbrev-ref HEAD' # current branch
+alias upush='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias up='git push -u origin `git rev-parse --abbrev-ref HEAD`'
+alias upf='git push -u origin `git rev-parse --abbrev-ref HEAD` -f'
+alias glog='git log --graph --color --decorate'
+alias glogo='git log --graph --color --decorate --oneline'
+alias glof="git log --color --all --date-order --decorate --dirstat=lines,cumulative --stat | sed 's/\([0-9] file[s]\? .*)$\)/\1\n_______\n-------/g' | less -R"
+alias rmb='git pull; git remote prune origin && git prune && git branch | grep -v -e "master" -e "develop" -e "*"| xargs -L 1 git branch -d'
+alias rmbD='git pull; git remote prune origin && git prune && git branch | grep -v -e "master" -e "develop" -e "*"| xargs -L 1 git branch -D'
+alias gitres='git restore `git diff --name-only`'
+alias remas='git fetch origin && git rebase origin/master -i'
+alias redev='git fetch origin && git rebase origin/develop -i'
+autoload -Uz compinit && compinit # git branch autocomplete
+
+# Git prompt
 source ~/other_dev/zsh-git-prompt/zshrc.sh
 export PROMPT='%n:%~$(git_super_status) $ '
-
-
-# See macos-bashrc for other good stuff
