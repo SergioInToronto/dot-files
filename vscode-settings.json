@@ -1,0 +1,14 @@
+{
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.editor.openPositioning": "last",
+    "[proto3]": {
+        "editor.indentSize": 2,
+        "editor.insertSpaces": true
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "editor.autoIndent": "advanced",
+    "extensions.ignoreRecommendations": true,
+    "window.zoomLevel": 1
+}
