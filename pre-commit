@@ -1,2 +1,8 @@
-# Ruby lint & format
+# Elixir
+git diff --staged --name-only | xargs mix format
+git diff --staged --name-only | xargs mix credo --strict
+git diff --staged --name-only --diff-filter=AM | xargs git add
+
+
+# Ruby
 git diff --name-only --cached | xargs bundle exec rubocop --auto-correct --
