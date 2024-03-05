@@ -44,8 +44,8 @@ alias upf='git push -u origin `git rev-parse --abbrev-ref HEAD` -f'
 alias glog='git log --graph --color --decorate'
 alias glogo='git log --graph --color --decorate --oneline'
 alias glof="git log --color --all --date-order --decorate --dirstat=lines,cumulative --stat | sed 's/\([0-9] file[s]\? .*)$\)/\1\n_______\n-------/g' | less -R"
-alias rmb='git pull; git remote prune origin && git prune && git branch | grep -v -e "main" -e "*"| xargs -L 1 git branch -d'
-alias rmbD='git pull; git remote prune origin && git prune && git branch | grep -v -e "main" -e "*"| xargs -L 1 git branch -D'
+alias rmb='git pull; git remote prune origin && git prune && git branch --no-column | grep -v -e "main" -e "*"| xargs -L 1 git branch -d'
+alias rmbD='git pull; git remote prune origin && git prune && git branch --no-column | grep -v -e "main" -e "*"| xargs -L 1 git branch -D'
 alias gitres='git restore `git diff --name-only`'
 alias remas='git fetch origin && git rebase origin/main -i'
 
