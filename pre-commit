@@ -6,6 +6,7 @@ git diff --staged --name-only --diff-filter=AM | xargs git add
 
 # Ruby
 git diff --name-only --cached | xargs bundle exec rubocop --auto-correct --
+git diff --staged --name-only --diff-filter=AM | xargs git add
 
 
 # Python
