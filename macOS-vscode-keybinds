@@ -27,8 +27,7 @@
     },
     {
         "key": "ctrl+shift+c",
-        "command": "copyRelativeFilePath",
-        "when": "editorFocus"
+        "command": "copyRelativeFilePath"
     },
     {
         "key": "cmd+k shift+alt+cmd+c",
@@ -58,5 +57,60 @@
         "key": "enter",
         "command": "explorer.openAndPassFocus",
         "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+j",
+        "command": "editor.action.joinLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // {
+    //     "key": "ctrl+j",
+    //     "command": "-editor.action.joinLines",
+    //     "when": "editorTextFocus && !editorReadonly"
+    // },
+    {
+        "key": "shift+home",
+        "command": "cursorTop",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+end",
+        "command": "cursorBottom",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "cmd+f",
+        "command": "actions.find"
+    },
+    {
+        "key": "cmd+f",
+        "command": "-actions.find",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+cmd+p",
+        "command": "workbench.action.showAllEditors"
+    },
+    {
+        "key": "alt+cmd+tab",
+        "command": "-workbench.action.showAllEditors"
+    },
+    {
+        "key": "cmd+k ctrl+shift+c",
+        "command": "copyFilePath",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+k cmd+p",
+        "command": "breadcrumbs.toggle"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.focusNextGroup",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "shift+cmd+v",
+        "command": "editor.action.pasteAs"
     }
 ]
