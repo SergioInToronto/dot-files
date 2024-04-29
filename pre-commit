@@ -1,16 +1,23 @@
+#! /bin/bash
+
+set -e
+
+
+
+
 # Elixir
-git diff --staged --name-only | xargs mix format
-git diff --staged --name-only | xargs mix credo --strict
+git diff --staged --name-only --diff-filter=AM | xargs mix format
+git diff --staged --name-only --diff-filter=AM | xargs mix credo --strict
 git diff --staged --name-only --diff-filter=AM | xargs git add
 
 
 # Ruby
-git diff --name-only --cached | xargs bundle exec rubocop --auto-correct --
+git diff --name-only --cached --diff-filter=AM | xargs bundle exec rubocop --auto-correct --
 git diff --staged --name-only --diff-filter=AM | xargs git add
 
 
 # Python
-git diff --staged --name-only | grep ".*\.py" | xargs poetry run ruff check
-git diff --staged --name-only | grep ".*\.py" | xargs poetry run ruff format
+git diff --staged --name-only --diff-filter=AM | grep ".*\.py" | xargs ~/.local/bin/poetry run ruff check
+git diff --staged --name-only --diff-filter=AM | grep ".*\.py" | xargs ~/.local/bin/poetry run ruff format
 git diff --staged --name-only | grep ".*\.py" | grep '/graphql/' && echo "TODO: command to update GraphQL Schema"
 git diff --staged --name-only --diff-filter=AM | xargs git add
