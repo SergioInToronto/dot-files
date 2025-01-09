@@ -15,7 +15,7 @@ setopt no_auto_remove_slash # when tab-completing a directory, keep the trailing
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron' # apps aren't automatically added to path
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron'
 
 # My preferences
 alias o='open'
