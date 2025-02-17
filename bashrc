@@ -89,5 +89,8 @@ alias restart-gnome-shell="busctl --user call org.gnome.Shell /org/gnome/Shell o
 
 
 # Gaming
+usage: `proton run ./game.exe`
 alias proton='STEAM_COMPAT_CLIENT_INSTALL_PATH=$(pwd) STEAM_COMPAT_DATA_PATH=$(pwd) ~/.local/share/Steam/steamapps/common/Proton\ -\ Experimental/proton'
-# ^ usage: `proton run ./game.exe`
+alias gputemps='watch -n 0.5 nvidia-smi'
+alias updis='sudo dpkg -i /tmp/discord*.deb'
+alias rgb='flatpak run org.openrgb.OpenRGB'
