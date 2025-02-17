@@ -69,12 +69,14 @@ alias ips='ip a | grep "inet " | grep -Pe "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[
 alias refi='active=`n c show --active | awk "/wifi/{print \\$1}"`; n c down $active; n c up $active'
 alias wip='watch ip a show wlp2s0'
 alias pt='ping tick'  # 128.100.100.128 tick
+alias p1='ping 1.1.1.1'
 alias n='nmcli'
 alias uv='nmcli c up vpn'
 alias dv='nmcli c down vpn'
 
 
 # Misc stuff
+alias o='xdg-open'
 alias vash='vim ~/.bashrc && source ~/.bashrc'
 alias b64='base64 -w 0'
 alias kv='killall -9 vlc'
