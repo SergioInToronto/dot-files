@@ -13,6 +13,10 @@ sudo apt install gnome-tweaks -y
 # Install Steam
 pushd /tmp/ && wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb && dpkg -i ./steam.deb && popd
 
+# battery longevity 
+echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+echo 55 | sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold
+
 # Uninstall totem, amazon, gnome accounts, etc.
 
 # Now find a nice wallpaper
