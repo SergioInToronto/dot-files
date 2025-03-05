@@ -15,4 +15,10 @@ ffmpeg -i v.mp4 -ss 3.333 -i a.opus -t 9 -c:a aac -c:v copy output.mp4
 * Video: Copy input (v.mp4) exactly to output (no conversion)
 
 
+## Replace Audio
+
+```
+ffmpeg -i video.mp4 -i audio2.aac -c:v copy -map 0:v:0 -map 1:a:0 output.mp4
+```
+
 ### TODO: bring others from bashrc
