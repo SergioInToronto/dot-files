@@ -2,6 +2,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "keyboard.dispatch": "keyCode",
     "workbench.editor.openPositioning": "last",
     "[proto3]": {
         "editor.indentSize": 2,
@@ -9,6 +10,8 @@
     },
     "git.openRepositoryInParentFolders": "never",
     "editor.autoIndent": "advanced",
+    "editor.mouseWheelScrollSensitivity": 2.2,
     "extensions.ignoreRecommendations": true,
+    "search.useIgnoreFiles": false,
     "window.zoomLevel": 1
 }
