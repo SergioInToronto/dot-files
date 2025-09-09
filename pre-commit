@@ -21,3 +21,7 @@ git diff --staged --name-only --diff-filter=AM | grep ".*\.py" | xargs ~/.local/
 git diff --staged --name-only --diff-filter=AM | grep ".*\.py" | xargs ~/.local/bin/poetry run ruff format
 git diff --staged --name-only | grep ".*\.py" | grep '/graphql/' && echo "TODO: command to update GraphQL Schema"
 git diff --staged --name-only --diff-filter=AM | xargs git add
+
+
+# Terraform (add this to all above)
+git diff --staged --name-only --diff-filter=AM | grep 'terraform/' | xargs terraform fmt -recursive
