@@ -1,5 +1,6 @@
 git config --global init.defaultBranch main
-git config --global rerere.enable --delete
+# git config --global rerere.enable --delete
+git config --global rerere.enabled true
 git config --global branch.sort -committerdate
 git config --global column.ui auto
 git config --global blame.ignoreRevsFile .git-blame-ignore-revs
