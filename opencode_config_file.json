@@ -1,0 +1,109 @@
+{
+  "__comment": "Put me in ~/.config/opencode/opencode.json",
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+  },
+  "plugin": [
+    "@plannotator/opencode@latest"
+  ],
+  "permission": {
+    "*": "ask",
+    "bash": {
+      "*": "ask",
+      "bundle exec rspec *": "allow",
+      "bundle exec rubocop *": "allow",
+      "bundle info *": "allow",
+      "bundle list *": "allow",
+      "cat *": "allow",
+      "echo $?": "allow",
+      "env *": "ask",
+      "find *": "allow",
+      "gh api *": "allow",
+      "gh pr checks *": "allow",
+      "gh pr diff *": "allow",
+      "gh pr view *": "allow",
+      "gh release list *": "allow",
+      "gh release view *": "allow",
+      "gh run view *": "allow",
+      "git branch --show-current": "allow",
+      "git diff *": "allow",
+      "git diff": "allow",
+      "git grep *": "allow",
+      "git log *": "allow",
+      "git log": "allow",
+      "git show *": "allow",
+      "git status *": "allow",
+      "git status": "allow",
+      "git symbolic-ref refs/remotes/origin/HEAD": "allow",
+      "grep *": "allow",
+      "head *": "allow",
+      "head": "allow",
+      "ls *": "allow",
+      "mix compile *": "allow",
+      "mix compile": "allow",
+      "mix credo *": "allow",
+      "mix deps.get": "allow",
+      "mix ecto.gen.migration *": "allow",
+      "mix format *": "allow",
+      "mix format": "allow",
+      "mix help *": "allow",
+      "mix static_analysis *": "allow",
+      "mix test *": "allow",
+      "osascript -e 'display notification *": "allow",
+      "pip show *": "allow",
+      "pip3 --version": "allow",
+      "podman volume inspect *": "allow",
+      "python --version": "allow",
+      "python -m pytest *": "allow",
+      "python3 --version": "allow",
+      "rg *": "allow",
+      "tilt version *": "allow",
+      "wc *": "allow",
+      "xargs grep *": "allow"
+    },
+    "edit": {
+      "~/dev/": "ask",
+      "../": "ask",
+      ".env": "ask",
+      ".envrc": "ask",
+      "./": "allow"
+    },
+    "external_directory": {
+      "~/dev/": "allow",
+      "../": "allow"
+    },
+    "glob": {
+      "*": "allow",
+      ".env": "ask",
+      ".envrc": "ask",
+      ".mise.toml": "ask",
+      "mise.toml": "ask"
+    },
+    "grep": {
+      "*": "allow",
+      ".env": "ask",
+      ".envrc": "ask",
+      ".mise.toml": "ask",
+      "mise.toml": "ask"
+    },
+    "list": {
+      "*": "allow"
+    },
+    "read": {
+      "*": "ask",
+      "./*": "allow",
+      "../*": "allow",
+      "~/dev/*": "allow",
+      ".env": "deny",
+      ".envrc": "deny",
+      ".mise.toml": "deny",
+      "mise.toml": "deny"
+    },
+    "task": {
+      "*": "ask",
+      "explore": "allow"
+    },
+    "todowrite": "allow",
+    "webfetch": "allow"
+  }
+}
