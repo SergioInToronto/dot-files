@@ -1,0 +1,117 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+  },
+  "plugin": [
+    "@plannotator/opencode@latest"
+  ],
+  "permission": {
+    "*": "ask",
+    "bash": {
+      "*": "ask",
+      "buf lint *": "allow",
+      "bundle exec rspec *": "allow",
+      "bundle exec rubocop *": "allow",
+      "bundle info *": "allow",
+      "bundle list *": "allow",
+      "cat *": "allow",
+      "dbt *": "allow",
+      "echo *": "ask",
+      "echo $?": "allow",
+      "env *": "ask",
+      "find *": "allow",
+      "gh api *": "allow",
+      "gh api repos/$(gh repo view --json nameWithOwner -q .nameWithOwner)/pulls *": "allow",
+      "gh pr checks *": "allow",
+      "gh pr diff *": "allow",
+      "gh pr view *": "allow",
+      "gh release list *": "allow",
+      "gh release view *": "allow",
+      "gh run view *": "allow",
+      "git branch --show-current": "allow",
+      "git branch -a": "allow",
+      "git check-ignore *": "allow",
+      "git diff *": "allow",
+      "git diff": "allow",
+      "git grep *": "allow",
+      "git log *": "allow",
+      "git log": "allow",
+      "git rev-parse --abbrev-ref HEAD": "allow",
+      "git show *": "allow",
+      "git status *": "allow",
+      "git status": "allow",
+      "git symbolic-ref refs/remotes/origin/HEAD": "allow",
+      "grep *": "allow",
+      "head *": "allow",
+      "head": "allow",
+      "ls *": "allow",
+      "MIX_ENV=test mix compile ": "allow",
+      "mix compile *": "allow",
+      "mix compile": "allow",
+      "mix credo *": "allow",
+      "mix deps.get": "allow",
+      "mix deps.get 2>&1": "allow",
+      "mix ecto.gen.migration *": "allow",
+      "mix ecto.migrations": "allow",
+      "MIX_ENV=test mix ecto.migrations *": "allow",
+      "mix format *": "allow",
+      "mix format": "allow",
+      "mix help *": "allow",
+      "mix static_analysis *": "allow",
+      "mix test *": "allow",
+      "mkdir *": "allow",
+      "osascript -e 'display notification *": "allow",
+      "pip show *": "allow",
+      "pip3 --version": "allow",
+      "podman volume inspect *": "allow",
+      "podman compose logs *": "allow",
+      "podman logs *": "allow",
+      "python --version": "allow",
+      "python -m pytest *": "allow",
+      "python3 --version": "allow",
+      "rg *": "allow",
+      "sed *": "ask",
+      "sort *": "allow",
+      "tail *": "allow",
+      "tilt version *": "allow",
+      "uniq": "allow",
+      "wc *": "allow",
+      "xargs grep *": "allow"
+    },
+    "edit": {
+      "*": "ask"
+    },
+    "external_directory": {
+      "*": "ask"
+    },
+    "glob": {
+      "*": "allow",
+      ".env": "deny"
+    },
+    "grep": {
+      "*": "allow",
+      ".env": "deny"
+    },
+    "list": {
+      "*": "allow"
+    },
+    "read": {
+      "*": "ask",
+      ".env": "ask",
+      ".envrc": "ask",
+      "./*": "allow",
+      "../*": "allow",
+      "config/*": "allow",
+      "lib/*": "allow",
+      "priv/*": "allow",
+      "test/*": "allow",
+      "tests/*": "allow"
+    },
+    "task": {
+      "*": "ask",
+      "explore": "allow"
+    },
+    "todowrite": "allow",
+    "webfetch": "allow"
+  }
+}
