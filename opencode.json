@@ -17,7 +17,8 @@
       "bundle list *": "allow",
       "cat *": "allow",
       "dbt *": "allow",
-      "echo *": "ask",
+      "echo *": "allow",
+      "echo $*": "ask",
       "echo $?": "allow",
       "env *": "ask",
       "find *": "allow",
@@ -39,6 +40,7 @@
       "git log": "allow",
       "git rev-parse --abbrev-ref HEAD": "allow",
       "git show *": "allow",
+      "git stash *": "deny",
       "git status *": "allow",
       "git status": "allow",
       "git symbolic-ref refs/remotes/origin/HEAD": "allow",
@@ -52,15 +54,20 @@
       "mix credo *": "allow",
       "mix deps.get": "allow",
       "mix deps.get 2>&1": "allow",
+      "mix deps.compile*": "allow",
+      "mix dialyzer*": "allow",
       "mix ecto.gen.migration *": "allow",
       "mix ecto.migrations": "allow",
+      "MIX_ENV=test mix ecto.migrate": "allow",
       "MIX_ENV=test mix ecto.migrations *": "allow",
       "mix format *": "allow",
       "mix format": "allow",
       "mix help *": "allow",
       "mix static_analysis *": "allow",
       "mix test *": "allow",
+      "SNAPSHOT_UPDATE=true mix test *": "allow",
       "mkdir *": "allow",
+      "npx playwright *": "allow",
       "osascript -e 'display notification *": "allow",
       "pip show *": "allow",
       "pip3 --version": "allow",
@@ -80,36 +87,88 @@
       "xargs grep *": "allow"
     },
     "edit": {
-      "*": "ask"
+      "*": "allow",
+      "../": "ask",
+      "./": "allow",
+      ".env": "ask",
+      ".envrc": "ask",
+      "~": "ask",
+      "~/dev/": "ask",
+      "config/*": "ask",
+      "context.md": "allow",
+      "lib/*": "allow",
+      "priv/*": "allow",
+      "scripts/*": "ask",
+      "test/*": "allow",
+      "tests/*": "allow",
+      "TODO.md": "allow"
     },
     "external_directory": {
-      "*": "ask"
+      "~/.plannotator/plans/*": "allow"
     },
     "glob": {
       "*": "allow",
-      ".env": "deny"
+      ".env": "ask",
+      ".envrc": "ask",
+      ".mise.toml": "ask",
+      "mise.toml": "ask"
     },
     "grep": {
       "*": "allow",
-      ".env": "deny"
+      ".env": "ask",
+      ".envrc": "ask",
+      ".mise.toml": "ask",
+      "mise.toml": "ask"
     },
     "list": {
       "*": "allow"
     },
+    "plannotator-review": "allow",
+    "npx plannotator *": "allow",
+    "playwright-test_browser_navigate": "allow",
+    "playwright-test_generator_setup_page": "allow",
+    "playwright-test_browser_get_config": "allow",
+    "playwright-test*_browser_click": "allow",
+    "playwright-test*_browser_drag": "allow",
+    "playwright-test*_browser_handle_dialog": "allow",
+    "playwright-test*_browser_hover": "allow",
+    "playwright-test*_browser_navigate": "allow",
+    "playwright-test*_browser_press_key": "allow",
+    "playwright-test*_browser_select_option": "allow",
+    "playwright-test*_browser_snapshot": "allow",
+    "playwright-test*_browser_verify_element_visible": "allow",
+    "playwright-test*_browser_verify_list_visible": "allow",
+    "playwright-test*_browser_verify_text_visible": "allow",
+    "playwright-test*_browser_verify_value": "allow",
+    "playwright-test*_browser_wait_for": "allow",
+    "playwright-test*_read_log": "allow",
+    "playwright-test*_setup_page": "allow",
     "read": {
+      "*": "allow",
+      "../*": "allow",
+      ".env": "deny",
+      ".envrc": "deny",
+      ".mise.toml": "deny",
+      ".plan/*": "allow",
+      "~/dev/*": "allow",
+      "mise.toml": "deny"
+    },
+    "read_old_kept_just_in_case": {
       "*": "ask",
       ".env": "ask",
       ".envrc": "ask",
       "./*": "allow",
       "../*": "allow",
+      "coherentpath/*": "allow",
       "config/*": "allow",
       "lib/*": "allow",
       "priv/*": "allow",
       "test/*": "allow",
-      "tests/*": "allow"
+      "tests/*": "allow",
+      "~/dev/*": "allow"
     },
     "task": {
-      "*": "ask",
+      "*": "allow",
       "explore": "allow"
     },
     "todowrite": "allow",
