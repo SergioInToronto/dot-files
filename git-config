@@ -1,9 +1,42 @@
-git config --global init.defaultBranch main
-# git config --global rerere.enable --delete
-git config --global rerere.enabled true
-git config --global branch.sort -committerdate
-git config --global column.ui auto
-git config --global blame.ignoreRevsFile .git-blame-ignore-revs
+# Put this in ~/.gitconfig
 
-# inside repos like CP and Helios:
-git maintenance start
+[user]
+    email = changeme@example.com
+    name = Sergio
+[init]
+    defaultBranch = main
+[blame]
+    ignoreRevsFile = .git-blame-ignore-revs
+[rerere]
+    enabled = true
+    autoupdate = true
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+# Added from https://blog.gitbutler.com/how-git-core-devs-configure-git
+
+[tag]
+    sort = version:refname
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    renames = true
+# [pull]
+#     # Always pull as `pull --rebase`, which requires always stashing changes (too annoying!)
+#     rebase = true
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+# Optional, nice to have
+
+[help]
+    autocorrect = prompt
+[trace2]
+	eventTarget = af_unix:stream:/Users/smartins/.git-ai/internal/daemon/trace2.sock
+	eventNesting = 10
